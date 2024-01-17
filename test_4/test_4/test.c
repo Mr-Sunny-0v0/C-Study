@@ -146,23 +146,103 @@
 
 
 
+//#include <stdio.h>
+//
+//int main(){
+//	char c,t;
+//	c = getchar();
+//	//(c>=65 && c<=90) ? (c=c+32) : (c=c);
+//	//(c>=65 && c<=90) ? (c=c+32) : c ;
+//	c = (c>=65 && c<=90) ? (c+32) : c;
+//	putchar(c);
+//	putchar('\n');
+//	return 0;
+//}
 
 
 
+//#include <stdio.h>
+//
+//int main(){
+//	double x;
+//	int y;
+//	printf("请输入x的值：");
+//	scanf("%lf",&x);
+//	if(x < 0){
+//		y = -1;
+//	}
+//	else{
+//		if(x > 0){
+//			y = 1;
+//		}
+//		else{
+//			y = 0;
+//		}
+//	}
+//	printf("y = %d\n",y);
+//	return 0;
+//}
 
 
 
+//#include <stdio.h>
+//
+//int main(){
+//	double x;
+//	int y;
+//	printf("请输入x的值：");
+//	scanf("%lf",&x);
+//	if(x < 0){
+//		y = -1;
+//	}
+//	else if(x > 0){
+//		y = 1;
+//	}
+//	else{
+//		y = 0;
+//	}
+//	printf("y = %d\n",y);
+//	return 0;
+//}
 
 
 
+//#include <stdio.h>
+//
+//int main(){
+//	char grades;
+//	printf("请输入成绩等级：");
+//	grades = getchar();
+//	switch(grades){
+//		case 'A':printf("85-100\n");
+//			break;
+//		case 'B':printf("70-84\n");
+//			break;
+//		case 'C':printf("60-69\n");
+//			break;
+//		case 'D':printf("<60\n");
+//			break;
+//		default:printf("输入错误！");
+//	}
+//	return 0;
+//}
 
 
 
-
-
-
-
-
+//#include <stdio.h>
+//
+//int main(){
+//	int year;
+//	printf("请输入年份：");
+//	scanf("%d",&year);
+//	if((year%4==0 && year%100!=0) || year%400==0){
+//		printf("%d年是闰年\n",year);
+//	}
+//	else{
+//		printf("%d年不是闰年\n",year);
+//	}
+//	return 0;
+//}
 
 
 

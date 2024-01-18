@@ -289,6 +289,233 @@
 
 
 
+//#include <stdio.h>
+//
+//int main(){
+//	int i,j,sum=0;
+//	for(i=1;i<=1000;i++,sum=0){
+//		for(j=1;j<i;j++){
+//			if(i%j==0) sum=sum+j;
+//		}
+//		if(sum == i){
+//			printf("%d its factors are 1",i);
+//			for(j=2;j<i;j++){
+//				if(i%j == 0) printf(",%d",j);
+//			}
+//			printf("\n");
+//		}
+//	}
+//	return 0;
+//}
+
+
+
+//#include <stdio.h>
+//
+//int main(){
+//	double sum,a1=2,a2=3,a3,b1=1,b2=2,b3;
+//	int i;
+//	sum = a1/b1 + a2/b2;
+//	for(i=3;i<=20;i++){
+//		a3 = a1 + a2;
+//		b3 = b1 + b2;
+//		sum = sum + a3/b3;
+//		a1 = a2;
+//		a2 = a3;
+//		b1 = b2;
+//		b2 = b3;
+//	}
+//	printf("sum = %.10lf\n",sum);
+//	return 0;
+//}
+
+
+
+//#include <stdio.h>
+//
+//int main(){
+//	double sum=0,h=100;
+//	int i;
+//	for(i=1;i<=10;i++){
+//		sum = sum + h + 0.5*h;
+//		h = 0.5*h;
+//	}
+//	printf("总路程=%.6lf\n高度=%.6lf\n",sum-h,h);
+//	return 0;
+//}
+
+
+
+//#include <stdio.h>
+//
+//int main(){
+//	int s=1,i;
+//	for(i=1;i<=9;i++){
+//		s = (s + 1)*2;
+//	}
+//	printf("第一天摘桃数 = %d\n",s);
+//	return 0;
+//}
+
+
+
+//#include <stdio.h>
+//#include <math.h>
+//
+//int main(){
+//	double a,x0,x1;
+//	printf("请输入要求平方根的数值：");
+//	scanf("%lf",&a);
+//	x0 = a/2;
+//	x1 = 0.5*(x0+a/x0);
+//	while(fabs(x1-x0)>=1e-5){
+//		x0 = x1;
+//		x1 = 0.5*(x0+a/x0);
+//	}
+//	printf("%.2lf的平方根 = %.5lf\n",a,x1);
+//	return 0;
+//}
+
+
+
+//#include <stdio.h>
+//#include <math.h>
+//
+//int main(){
+//	double x0 = 1.5,x1;
+//	x1 = x0-(2*x0*x0*x0-4*x0*x0+3*x0-6)/(6*x0*x0-8*x0+3);
+//	while(fabs(x1-x0)>=1e-5){
+//		x0 = x1;
+//		x1 = x0-(2*x0*x0*x0-4*x0*x0+3*x0-6)/(6*x0*x0-8*x0+3);
+//	}
+//	printf("根=%.2lf\n",x1);
+//	return 0;
+//}
+
+
+
+//#include <stdio.h>
+//#include <math.h>
+//
+//double f(double x){
+//	return (2*x*x*x-4*x*x+3*x-6);
+//}
+//
+//int main(){
+//	double x1,x2,x0;
+//	do{
+//		printf("请输入有根上下限（空格隔开）：");
+//		scanf("%lf%lf",&x1,&x2);
+//	}while(f(x1)*f(x2) > 0);
+//	x0 = (x1+x2)/2;
+//	while(fabs(f(x0))>=1e-5){
+//		if(f(x1)*f(x0) < 0){
+//			x2 = x0;
+//		}
+//		else{
+//			x1 = x0;
+//		}
+//		x0 = (x1+x2)/2;
+//	}
+//	printf("根 = %.2lf\n",x0);
+//	return 0;
+//}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

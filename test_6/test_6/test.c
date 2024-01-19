@@ -107,19 +107,85 @@
 
 
 
+//#include <stdio.h>
+//
+//int main(){
+//	char c[15] = {'I',' ','a','m',' ','a',' ','s','t','u','d','e','n','t','.'};
+//	//char c[16] = {"I am a student."};
+//	int i;
+//	for(i=0;i<=14;i++){
+//		printf("%c",c[i]);
+//	}
+//	printf("\n");
+//	return 0;
+//}
 
 
 
+//#include <stdio.h>
+//
+//int main(){
+//	char c[5][5]={{' ',' ','*'},{' ','*',' ','*'},{'*',' ',' ',' ','*'},{' ','*',' ','*'},{' ',' ','*'}};
+//	int i,j;
+//	for(i=0;i<=4;i++){
+//		for(j=0;j<=4;j++){
+//			printf("%c",c[i][j]);
+//		}
+//		printf("\n");
+//	}
+//	return 0;
+//}
 
 
 
+//#include <stdio.h>
+//
+//int main(){
+//	char s[100];
+//	int word=0,count=0,i;
+//	printf("请输入字符串：");
+//	//scanf("%s",s);		//scanf遇到空格会分裂
+//	gets(s);			//gets遇到空格不会分裂
+//	for(i=0;s[i]!='\0';i++){
+//		if(s[i] == ' '){
+//			word = 0;
+//		}
+//		else{
+//			if(word == 0){
+//				count++;
+//				word = 1;
+//			}
+//		}
+//	}
+//	printf("单词数 = %d\n",count);
+//	return 0;
+//}
 
 
 
-
-
-
-
+//#include <stdio.h>
+//#include <string.h>
+//
+//int main(){
+//	char sm[100],s1[100],s2[100],s3[100];
+//	printf("请输入第一个字符串：");
+//	gets(s1);
+//	printf("请输入第二个字符串：");
+//	gets(s2);
+//	printf("请输入第三个字符串：");
+//	gets(s3);
+//	if(strcmp(s1,s2) > 0){
+//		strcpy(sm,s1);
+//	}
+//	else{
+//		strcpy(sm,s2);
+//	}
+//	if(strcmp(sm,s3) <= 0){
+//		strcpy(sm,s3);
+//	}
+//	printf("最大：%s\n",sm);
+//	return 0;
+//}
 
 
 

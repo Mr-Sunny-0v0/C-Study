@@ -1,4 +1,4 @@
-﻿生成启动时间为 2024/1/19 11:43:03。
+﻿生成启动时间为 2024/1/19 17:25:56。
      1>项目“D:\Study\C\C-Study\test_6\test_6\test_6.vcxproj”在节点 2 上(build 个目标)。
      1>InitializeBuildStatus:
          正在创建“Debug\test_6.unsuccessfulbuild”，因为已指定“AlwaysCreate”。
@@ -18,4 +18,4 @@
 
 生成成功。
 
-已用时间 00:00:00.63
+已用时间 00:00:00.88

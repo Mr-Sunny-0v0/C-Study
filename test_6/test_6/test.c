@@ -189,23 +189,135 @@
 
 
 
+//#include <stdio.h>
+//#include <math.h>
+//
+//int main(){
+//	int i,j,n,a[101];
+//	for(i=1;i<=100;i++){
+//		a[i] = i;
+//	}
+//	a[1] = 0;
+//	for(i=2;i<=sqrt(100.0);i++){
+//		for(j=i+1;j<=100;j++){
+//			if(a[i]!=0 && a[j]!=0){
+//				if(a[j]%a[i]==0){
+//					a[j] = 0;
+//				}
+//			}
+//		}
+//	}
+//	n = 0;
+//	for(i=1;i<=100;i++){
+//		if(a[i]!=0){
+//			printf("%d\t",a[i]);
+//			n++;
+//		}
+//		if(n==10){
+//			printf("\n");
+//			n=0;
+//		}
+//	}
+//	printf("\n");
+//	return 0;
+//}
 
 
 
+//#include <stdio.h>
+//
+//int main(){
+//	int i,j,t,min,a[11];
+//	printf("原顺序：");
+//	for(i=1;i<=10;i++){
+//		scanf("%d",&a[i]);
+//	}
+//	for(i=1;i<=9;i++){
+//		min = i;
+//		for(j=i+1;j<=10;j++){
+//			if(a[min] > a[j]){
+//				min = j;
+//			}
+//		}
+//		t = a[min];
+//		a[min] = a[i];
+//		a[i] = t;
+//	}
+//	printf("排序后：");
+//	for(i=1;i<=10;i++){
+//		printf("%d ",a[i]);
+//	}
+//	printf("\n");
+//	return 0;
+//}
 
 
 
+//#include <stdio.h>
+//
+//int main(){
+//	int i,j,sum,a[3][3];
+//	printf("请输入3*3整形矩阵：\n");
+//	for(i=0;i<=2;i++){
+//		for(j=0;j<=2;j++){
+//			scanf("%d",&a[i][j]);
+//		}
+//	}
+//	sum = a[0][0] + a[1][1] + a[2][2];
+//	printf("sum = %d\n",sum);
+//	return 0;
+//}
 
 
 
+//#include <stdio.h>
+//
+//int main(){
+//	int i,j,num,a[11];
+//	printf("原数组：");
+//	for(i=0;i<=9;i++){
+//		scanf("%d",&a[i]);
+//	}
+//	printf("插入数：");
+//	scanf("%d",&num);
+//	if(num > a[9]){
+//		a[10] = num;
+//	}
+//	else{
+//		for(i=0;num>a[i];i++);
+//		for(j=10;j>i;j--){
+//			a[j] = a[j-1];
+//		}
+//		a[i] = num;
+//	}
+//	printf("新数组：");
+//	for(i=0;i<=10;i++){
+//		printf("%d ",a[i]);
+//	}
+//	return 0;
+//}
 
 
 
-
-
-
-
-
+//#include <stdio.h>
+//
+//int main(){
+//	int i,t,a[5];
+//	printf("原数组：");
+//	for(i=0;i<=4;i++){
+//		scanf("%d",&a[i]);
+//	}
+//	for(i=0;i<5/2;i++){
+//		t = a[i];
+//		a[i] = a[5-i-1];
+//		a[5-i-1] = t;
+//	}
+//	printf("新数组：");
+//	for(i=0;i<=4;i++){
+//		printf("%d ",a[i]);
+//	}
+//	return 0;
+//}
 
 
 

@@ -321,15 +321,104 @@
 
 
 
+//#include <stdio.h>
+//
+//int main(){
+//	int i,j,a[10][10];
+//	for(i=0;i<=9;i++){
+//		a[i][0] = 1;
+//		a[i][i] = 1;
+//	}
+//	for(i=2;i<=9;i++){
+//		for(j=1;j<i;j++){
+//			a[i][j] = a[i-1][j-1] + a[i-1][j];
+//		}
+//	}
+//	for(i=0;i<=9;i++){
+//		for(j=0;j<=i;j++){
+//			printf("%d\t",a[i][j]);
+//		}
+//		printf("\n");
+//	}
+//	return 0;
+//}
 
 
 
+//#include <stdio.h>
+//
+//int main(){
+//	int i1,j1,i,j,k,n,a[100][100];
+//	printf("请输入阶数（奇数&<100）：");
+//	scanf("%d",&n);
+//	for(i=1;i<=n;i++){
+//		for(j=1;j<=n;j++){
+//			a[i][j] = 0;
+//		}
+//	}
+//	i=1;
+//	j=n/2+1;
+//	a[i][j] = 1;
+//	for(k=2;k<=n*n;k++){
+//		i1 = i;			//右上角特殊
+//		j1 = j;
+//		i = i-1;
+//		j = j+1;
+//		if(i<1) i=n;
+//		if(j>n) j=1;
+//		if(a[i][j]!=0){
+//			i = i1+1;
+//			j = j1;
+//		}
+//		a[i][j] = k;
+//	}
+//	for(i=1;i<=n;i++){
+//		for(j=1;j<=n;j++){
+//			printf("%d\t",a[i][j]);
+//		}
+//		printf("\n");
+//	}
+//	return 0;
+//}
 
 
 
-
-
-
+//#include <stdio.h>
+//
+//int main(){
+//	int i,j,k,max,m,flag,a[4][5];
+//	printf("请输入数组：\n");
+//	for(i=0;i<=3;i++){
+//		for(j=0;j<=4;j++){
+//			scanf("%d",&a[i][j]);
+//		}
+//	}
+//	for(i=0;i<=3;i++){
+//		max = a[i][0];
+//		m = 0;
+//		for(j=1;j<=4;j++){
+//			if(max < a[i][j]){
+//				max = a[i][j];
+//				m = j;
+//			}
+//		}
+//		flag = 1;
+//		for(k=0;k<=3;k++){
+//			if(max > a[k][m]){
+//				flag = 0;
+//				break;
+//			}
+//		}
+//		if(flag == 1){
+//			printf("鞍点：a[%d][%d] = %d\n",i,m,max);
+//			break;
+//		}
+//	}
+//	if(flag == 0){
+//			printf("没有鞍点！\n");
+//		}
+//	return 0;
+//}
 
 
 

@@ -422,31 +422,156 @@
 
 
 
+//#include <stdio.h>
+//
+//int main(){
+//	int i,num,a[15],bot,top,mid;
+//	printf("原数组（由大到小）：");
+//	for(i=0;i<=14;i++){
+//		scanf("%d",&a[i]);
+//	}
+//	printf("查询数：");
+//	scanf("%d",&num);
+//	bot = 0;
+//	top = 14;
+//	mid = (bot + top)/2;
+//	while(bot<=top && a[mid]!=num){
+//		if(num > a[mid]) top = mid - 1;
+//		else bot = mid + 1;
+//		mid = (bot + top)/2;
+//	}
+//	if(a[mid]==num) printf("位置=%d\n",mid+1);
+//	else printf("无此数\n");
+//	return 0;
+//}
 
 
 
+//#include <stdio.h>
+//
+//int main(){
+//	int i,j,ed=0,ex=0,s=0,k=0,q=0;
+//	char c[3][80];
+//	for(i=0;i<=2;i++){
+//		printf("请输入第 %d 行文字：",i+1);
+//		gets(c[i]);
+//		for(j=0;c[i][j]!='\0';j++){
+//			if(c[i][j]>='A' && c[i][j]<='Z') ed++;
+//			else if(c[i][j]>='a' && c[i][j]<='z') ex++;
+//			else if(c[i][j]>='0' && c[i][j]<='9') s++;
+//			else if(c[i][j]==' ') k++;
+//			else q++;
+//		}
+//	}
+//	printf("大写字母：%d个\n小写字母：%d个\n数字：%d个\n空格：%d个\n其他字符：%d个\n",ed,ex,s,k,q);
+//	return 0;
+//}
 
 
 
+//#include <stdio.h>
+//
+//int main(){
+//	char c[5]={'*','*','*','*','*'};
+//	int i,j;
+//	for(i=0;i<=4;i++){
+//		for(j=0;j<=i;j++){
+//			printf(" ");
+//		}
+//		for(j=0;j<=4;j++){
+//			printf("%c ",c[j]);
+//		}
+//		printf("\n");
+//	}
+//	return 0;
+//}
 
 
 
+//#include <stdio.h>
+//
+//int main(){
+//	char c[100];
+//	int i;
+//	printf("请输入密码：");
+//	gets(c);
+//	for(i=0;c[i]!='\0';i++){
+//		if(c[i]>='A' && c[i]<='Z'){
+//			c[i] = 'A' + 'Z' - c[i];
+//		}
+//		else if(c[i]>='a' && c[i]<='z'){
+//			c[i] = 'a' + 'z' - c[i];
+//		}
+//	}
+//	printf("原文：");
+//	puts(c);
+//	return 0;
+//}
 
 
 
+//#include <stdio.h>
+//
+//int main(){
+//	char c1[100],c2[50];
+//	int i,j,k;
+//	printf("请输入字符串1：");
+//	gets(c1);
+//	printf("请输入字符串2：");
+//	gets(c2);
+//	for(i=0;c1[i]!='\0';i++);
+//	for(j=0;c2[j]!='\0';j++){
+//		c1[i] = c2[j];
+//		i++;
+//	}
+//	c1[i] = '\0';
+//	printf("连接后字符串：");
+//	puts(c1);
+//	return 0;
+//}
 
 
 
+//#include <stdio.h>
+//
+//int main(){
+//	char s1[100],s2[100];
+//	int i;
+//	printf("请输入字符串s1：");
+//	gets(s1);
+//	printf("请输入字符串s2：");
+//	gets(s2);
+//	for(i=0;s1[i]!='\0' && s2[i]!='\0';i++){
+//		if(s1[i] != s2[i]){
+//			printf("%d\n",s1[i]-s2[i]);
+//			break;
+//		}
+//	}
+//	if(s1[i]=='\0'&& s2[i]!='\0') printf("%d\n",-999);
+//	if(s1[i]!='\0'&& s2[i]=='\0') printf("%d\n",999);
+//	if(s1[i]=='\0'&& s2[i]=='\0') printf("%d\n",0);
+//	return 0;
+//}
 
 
 
-
-
-
-
-
-
-
+//#include <stdio.h>
+//
+//int main(){
+//	char s1[100],s2[100];
+//	int i;
+//	printf("请输入字符串1：");
+//	gets(s1);
+//	printf("请输入字符串2：");
+//	gets(s2);
+//	for(i=0;s2[i]!='\0';i++){
+//		s1[i] = s2[i];
+//	}
+//	s1[i] = '\0';
+//	printf("字符串1：");
+//	puts(s1);
+//	return 0;
+//}
 
 
 

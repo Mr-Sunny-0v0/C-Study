@@ -384,6 +384,407 @@
 
 
 
+//#include <stdio.h>
+//
+//int zdy(int x,int y){
+//	int t;
+//	if(x < y){
+//		t = x;
+//		x = y;
+//		y = t;
+//	}
+//	while(x%y!=0){
+//		t = x%y;
+//		x = y;
+//		y = t;
+//	}
+//	return y;
+//}
+//
+//int zxb(int x,int y){
+//	return x*y/zdy(x,y);
+//}
+//
+//int main(){
+//	int num1,num2;
+//	printf("请输入两个整数（用空格隔开）：");
+//	scanf("%d%d",&num1,&num2);
+//	printf("最大公约数 = %d\t最小公倍数 = %d\n",zdy(num1,num2),zxb(num1,num2));
+//	return 0;
+//}
+
+
+
+//#include <stdio.h>
+//#include <math.h>
+//
+//void sg2(double a,double b,double c){
+//	double x1,x2;
+//	x1 = (-b+sqrt(b*b-4*a*c))/(2*a);
+//	x2 = (-b-sqrt(b*b-4*a*c))/(2*a);
+//	printf("x1 = %lf\nx2 = %lf\n",x1,x2);
+//}
+//
+//void sg1(double a,double b,double c){
+//	double x;
+//	x = (-b)/(2*a);
+//	printf("x1 = x2 = %lf\n",x);
+//}
+//
+//void xg2(double a,double b,double c){
+//	double ai,bi;
+//	ai = (-b)/(2*a);
+//	bi = sqrt(4*a*c-b*b)/(2*a);
+//	printf("x1 = %lf + %lfi\nx2 = %lf - %lfi\n",ai,bi,ai,bi);
+//}
+//
+//int main(){
+//	double a,b,c,pb;
+//	printf("请输入a,b,c：");
+//	scanf("%lf,%lf,%lf",&a,&b,&c);
+//	pb = b*b-4*a*c;
+//	if(pb>1e-10)
+//		sg2(a,b,c);
+//	else if(fabs(pb)<1e-10)
+//		sg1(a,b,c);
+//	else
+//		xg2(a,b,c);
+//	return 0;
+//}
+
+
+
+//#include <stdio.h>
+//
+//int pss(int x){
+//	int i;
+//	for(i=2;i<=x/2;i++){
+//		if(x%i==0){
+//			break;
+//		}
+//	}
+//	if(i>x/2)
+//		return 1;
+//	else
+//		return 0;
+//}
+//
+//int main(){
+//	int num;
+//	printf("请输入一个整数：");
+//	scanf("%d",&num);
+//	if(pss(num)){
+//		printf("%d是素数!\n",num);
+//	}
+//	else{
+//		printf("%d不是素数!\n",num);
+//	}
+//	return 0;
+//}
+
+
+
+//#include <stdio.h>
+//
+//void zz(int a[3][3]){
+//	int i,j,t;
+//	for(i=0;i<=2;i++){
+//		for(j=i+1;j<=2;j++){
+//			t = a[i][j];
+//			a[i][j] = a[j][i];
+//			a[j][i] = t;
+//		}
+//	}
+//}
+//
+//int main(){
+//	int i,j,a[3][3];
+//	printf("请输入3*3整数数组的元素：\n");
+//	for(i=0;i<=2;i++){
+//		for(j=0;j<=2;j++){
+//			scanf("%d",&a[i][j]);
+//		}
+//	}
+//	zz(a);
+//	printf("转置后数组：\n");
+//	for(i=0;i<=2;i++){
+//		for(j=0;j<=2;j++){
+//			printf("%d ",a[i][j]);
+//		}
+//		printf("\n");
+//	}
+//	return 0;
+//}
+
+
+
+//#include <stdio.h>
+//
+//void fx(char c[]){
+//	int i,j;
+//	char t;
+//	for(i=0;c[i]!='\0';i++);
+//	for(j=0;j<i/2;j++){
+//		t = c[j];
+//		c[j] = c[i-j-1];
+//		c[i-j-1] = t;
+//	}
+//}
+//
+//int main(){
+//	char c[100];
+//	printf("请输入字符串：");
+//	gets(c);
+//	fx(c);
+//	printf("反序后字符串：");
+//	puts(c);
+//	return 0;
+//}
+
+
+
+//#include <stdio.h>
+//
+//void lj(char s1[],char s2[],char s[]){		//s1与s2连接后放在s
+//	int i,j;
+//	for(i=0;s1[i]!='\0';i++){
+//		s[i] = s1[i];
+//	}
+//	for(j=0;s2[j]!='\0';j++){
+//		s[i++] = s2[j];
+//	}
+//	s[i] = '\0';
+//}
+//
+//int main(){
+//	char s1[50],s2[50],s[100];
+//	printf("请输入字符串1：");
+//	gets(s1);
+//	printf("请输入字符串2：");
+//	gets(s2);
+//	lj(s1,s2,s);
+//	printf("连接后字符串：");
+//	puts(s);
+//	return 0;
+//}
+
+
+
+//#include <stdio.h>
+//
+//void fy(char s1[],char s2[]){
+//	int i,j;
+//	for(i=0,j=0;s1[i]!='\0';i++){
+//		if(s1[i]=='A'||s1[i]=='a'||s1[i]=='E'||s1[i]=='e'||s1[i]=='I'||s1[i]=='i'||s1[i]=='O'||s1[i]=='o'||s1[i]=='U'||s1[i]=='u'){
+//			s2[j] = s1[i];
+//			j++;
+//		}
+//	}
+//	s2[j] = '\0';
+//}
+//
+//int main(){
+//	char s1[100],s2[100];
+//	printf("请输入字符串：");
+//	gets(s1);
+//	fy(s1,s2);
+//	printf("元音字母：");
+//	puts(s2);
+//	return 0;
+//}
+
+
+
+//#include <stdio.h>
+//
+//void ck(char s[]){
+//	int i,j;
+//	for(i=0;s[i]!='\0';i++);
+//	for(j=i;j>0;j--){
+//		s[2*j] = s[j];
+//		s[2*j-1] = ' ';
+//	}
+//}
+//
+//int main(){
+//	char s[10];
+//	printf("请输入4位整数：");
+//	gets(s);
+//	ck(s);
+//	printf("插入空格后：");
+//	puts(s);
+//	return 0;
+//}
+
+
+
+//#include <stdio.h>
+//
+//int z=0,sz=0,k=0,q=0;
+//
+//void tj(char s[]){
+//	int i;
+//	for(i=0;s[i]!='\0';i++){
+//		if((s[i]>='A'&&s[i]<='Z')||(s[i]>='a'&&s[i]<='z'))
+//			z++;
+//		else if(s[i]>='0'&&s[i]<='9')
+//			sz++;
+//		else if(s[i]==' ')
+//			k++;
+//		else
+//			q++;
+//	}
+//}
+//
+//int main(){
+//	char s[100];
+//	printf("请输入字符串：");
+//	gets(s);
+//	tj(s);
+//	printf("字母：%d个\n数字：%d个\n空格：%d个\n其他：%d个\n",z,sz,k,q);
+//	return 0;
+//}
+
+
+
+//#include <stdio.h>
+//
+//void max_word(char s[]){
+//	int i=0,tlen=0,k=0,len=0;
+//	for(i=0;s[i]!='\0';i++){
+//		if((s[i]>='A'&&s[i]<='Z')||(s[i]>='a'&&s[i]<='z')){
+//			tlen++;
+//		}
+//		else{
+//			if(len < tlen){
+//				len = tlen;
+//				k = i-tlen;
+//			}
+//			tlen = 0;
+//		}
+//
+//	}
+//	printf("最长单词：");
+//	for(i=k;(s[i]>='A'&&s[i]<='Z')||(s[i]>='a'&&s[i]<='z');i++){
+//		printf("%c",s[i]);
+//	}
+//	printf("\n");
+//}
+//
+//int main(){
+//	char s[100];
+//	printf("请输入字符：");
+//	gets(s);
+//	max_word(s);
+//	return 0;
+//}
+
+
+
+//#include <stdio.h>
+//
+//void sort(char s[]){
+//	int i,j;
+//	char t;
+//	for(i=0;i<=8;i++){
+//		for(j=0;j<=8-i;j++){
+//			if(s[j] > s[j+1]){
+//				t = s[j];
+//				s[j] = s[j+1];
+//				s[j+1] = t;
+//			}
+//		}
+//	}
+//}
+//
+//int main(){
+//	char s[10];
+//	int i;
+//	printf("请输入10个字符：");
+//	for(i=0;i<=9;i++){
+//		scanf("%c",&s[i]);
+//	}
+//	sort(s);
+//	printf("排序后字符：");
+//	for(i=0;i<=9;i++){
+//		printf("%c",s[i]);
+//	}
+//	printf("\n");
+//	return 0;
+//}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

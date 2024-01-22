@@ -294,19 +294,93 @@
 
 
 
+//#include <stdio.h>
+//
+//int Max(int a[3][4]){
+//	int i,j,max=a[0][0];
+//	for(i=0;i<=2;i++){
+//		for(j=0;j<=3;j++){
+//			if(max < a[i][j]){
+//				max = a[i][j];
+//			}
+//		}
+//	}
+//	return max;
+//}
+//
+//int main(){
+//	int a[3][4] = {{1,3,5,7},{2,4,6,8},{15,17,34,12}};
+//	printf("max = %d\n",Max(a));
+//	return 0;
+//}
 
 
 
+//#include <stdio.h>
+//
+//double Max,Min;
+//
+//double Aver(double num[]){
+//	double sum = 0.0;
+//	int i;
+//	Max = num[0];
+//	Min = num[0];
+//	for(i=0;i<=9;i++){
+//		if(Min > num[i])
+//			Min = num[i];
+//		else if(Max <num[i])
+//			Max = num[i];
+//		sum = sum + num[i];
+//	}
+//	return sum/10;
+//}
+//
+//int main(){
+//	int i;
+//	double score[10];
+//	printf("请输入数组元素：\n");
+//	for(i=0;i<=9;i++){
+//		scanf("%lf",&score[i]);
+//	}
+//	printf("Max = %lf\nMin = %lf\nAver = %lf\n",Max,Min,Aver(score));
+//	return 0;
+//}
 
 
 
+//#include <stdio.h>
+//
+//int jc(int n){
+//	static int f = 1;
+//	f = f*n;
+//	return f;
+//}
+//
+//int main(){
+//	int i,n;
+//	printf("请输入一个整数：");
+//	scanf("%d",&n);
+//	for(i=1;i<=5;i++){
+//		printf("%d! = %d\n",i,jc(i));
+//	}
+//	return 0;
+//}
 
 
 
-
-
-
-
+//#include <stdio.h>
+//
+//int A;
+//
+//int main(){
+//	int b=3,m;
+//	int cf(int num);
+//	printf("请输入a和m（用空格隔开）：");
+//	scanf("%d%d",&A,&m);
+//	printf("%d*%d = %d\n",A,b,A*b);
+//	printf("%d**%d = %d\n",A,m,cf(m));
+//	return 0;
+//}
 
 
 

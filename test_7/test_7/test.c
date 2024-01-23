@@ -715,16 +715,83 @@
 
 
 
+//#include <stdio.h>
+//#include <math.h>
+//
+//double nd(double a,double b,double c,double d,double x0){
+//	double x;
+//	x = x0-(a*x0*x0*x0+b*x0*x0+c*x0+d)/(3*a*x0*x0+2*b*x0+c);
+//	while(fabs(x-x0) >= 1e-3){
+//		x0 = x;
+//		x = x0-(a*x0*x0*x0+b*x0*x0+c*x0+d)/(3*a*x0*x0+2*b*x0+c);
+//	}
+//	return x;
+//}
+//
+//int main(){
+//	double a,b,c,d,x0;
+//	printf("请输入a,b,c,d：");
+//	scanf("%lf,%lf,%lf,%lf",&a,&b,&c,&d);
+//	printf("请输入x0：");
+//	scanf("%lf",&x0);
+//	printf("%lf附近的根 = %lf\n",x0,nd(a,b,c,d,x0));
+//	return 0;
+//}
 
 
 
+//#include <stdio.h>
+//
+//double lrd(int n,int x){
+//	if(n==0){
+//		return 1;
+//	}
+//	else if(n==1){
+//		return x;
+//	}
+//	else{
+//		return ((2*n-1)*x*lrd(n-1,x)-(n-1)*lrd(n-2,x))/n;
+//	}
+//}
+//
+//int main(){
+//	int n,x;
+//	printf("请输入n,x：");
+//	scanf("%d,%d",&n,&x);
+//	printf("%d阶勒让德x=%d的值 = %lf\n",n,x,lrd(n,x));
+//	return 0;
+//}
 
 
 
+//无14,15,16,17题，看答案就行
 
 
 
-
+//#include <stdio.h>
+//
+//int tian(int year,int month,int day){
+//	int mday[12] = {31,28,31,30,31,30,31,31,30,31,30,31};
+//	int i,num=0;
+//	if(month>=2){
+//		for(i=0;i<=month-2;i++)
+//			num = num +mday[i];
+//	}
+//	if(((year%4==0&&year%100!=0)||year%400==0)&&(month>=3)){
+//		return num+1+day;
+//	}
+//	else{
+//		return num+day;
+//	}
+//}
+//
+//int main(){
+//	int year,month,day;
+//	printf("请输入年月日（用逗号隔开）：");
+//	scanf("%d,%d,%d",&year,&month,&day);
+//	printf("%d年%d月%d日是今年第%d天\n",year,month,day,tian(year,month,day));
+//	return 0;
+//}
 
 
 

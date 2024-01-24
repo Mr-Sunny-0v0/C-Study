@@ -122,31 +122,160 @@
 
 
 
+//#include <stdio.h>
+//
+//int main(){
+//	int i,a[10];
+//	printf("请输入10个整数：");
+//	for(i=0;i<=9;i++){
+//		scanf("%d",&a[i]);
+//	}
+//	printf("数组元素：");
+//	for(i=0;i<=9;i++){
+//		printf("%d ",a[i]);
+//	}
+//	printf("\n");
+//	return 0;
+//}
 
 
 
+//#include <stdio.h>
+//
+//int main(){
+//	int i,a[10];
+//	printf("请输入10个整数：");
+//	for(i=0;i<=9;i++){
+//		scanf("%d",&a[i]);
+//	}
+//	printf("数组元素：");
+//	for(i=0;i<=9;i++){
+//		printf("%d ",*(a+i));
+//	}
+//	printf("\n");
+//	return 0;
+//}
 
 
 
+//#include <stdio.h>
+//
+//int main(){
+//	int i,a[10],*p;
+//	printf("请输入10个整数：");
+//	for(i=0;i<=9;i++){
+//		scanf("%d",a+i);
+//	}
+//	printf("数组元素：");
+//	for(p=a;p<=a+9;p++){
+//		printf("%d ",*p);
+//	}
+//	printf("\n");
+//	return 0;
+//}
 
 
 
+//#include <stdio.h>
+//
+//int main(){
+//	int i,*p,a[10];
+//	printf("请输入10个整数：");
+//	for(p=a;p<=a+9;p++){
+//		scanf("%d",p);
+//	}
+//	//p=a;
+//	for(i=0;i<=9;i++,p++){
+//		printf("%d ",*p);
+//	}
+//	printf("\n");
+//	return 0;
+//}
 
 
 
+//#include <stdio.h>
+//
+//void f_sort(int a[],int n){
+//	int i,t;
+//	for(i=0;i<=(n-1)/2;i++){
+//		t = a[i];
+//		a[i] = a[n-1-i];
+//		a[n-1-i] = t;
+//	}
+//}
+//
+//int main(){
+//	int i,a[10];
+//	printf("请输入10个整数：");
+//	for(i=0;i<=9;i++){
+//		scanf("%d",&a[i]);
+//	}
+//	f_sort(a,10);
+//	printf("排序后数组：");
+//	for(i=0;i<=9;i++){
+//		printf("%d ",a[i]);
+//	}
+//	printf("\n");
+//	return 0;
+//}
 
 
 
+//#include <stdio.h>
+//
+//void f_sort(int *a,int n){
+//	int i,t;
+//	for(i=0;i<=(n-1)/2;i++){
+//		t = *(a+i);
+//		*(a+i) = *(a+n-1-i);
+//		*(a+n-1-i) = t;
+//	}
+//}
+//
+//int main(){
+//	int i,a[10];
+//	printf("请输入10个整数：");
+//	for(i=0;i<=9;i++){
+//		scanf("%d",&a[i]);
+//	}
+//	f_sort(a,10);
+//	printf("排序后数组：");
+//	for(i=0;i<=9;i++){
+//		printf("%d ",a[i]);
+//	}
+//	printf("\n");
+//	return 0;
+//}
 
 
 
-
-
-
-
-
-
-
+//#include <stdio.h>
+//
+//void f_sort(int *x,int n){
+//	int i,t;
+//	for(i=0;i<=(n-1)/2;i++){
+//		t = *(x+i);
+//		*(x+i) = *(x+n-1-i);
+//		*(x+n-1-i) = t;
+//	}
+//}
+//
+//int main(){
+//	int i,*p,a[10];
+//	printf("请输入10个整数：");
+//	for(i=0;i<=9;i++){
+//		scanf("%d",&a[i]);
+//	}
+//	p = a;
+//	f_sort(p,10);
+//	printf("排序后数组：");
+//	for(i=0;i<=9;i++){
+//		printf("%d ",a[i]);
+//	}
+//	printf("\n");
+//	return 0;
+//}
 
 
 

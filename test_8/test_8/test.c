@@ -279,11 +279,58 @@
 
 
 
+//#include <stdio.h>
+//
+//void sort(int a[],int n){
+//	int i,j,t,max;
+//	for(i=0;i<=n-2;i++){
+//		max = i;
+//		for(j=i+1;j<=n-1;j++){
+//			if(a[max] < a[j]){
+//				max = j;
+//			}
+//		}
+//		if(max != i){
+//			t = a[i];
+//			a[i] = a[max];
+//			a[max] = t;
+//		}
+//	}
+//}
+//
+//int main(){
+//	int i,*p,a[10];
+//	printf("请输入10个整数（用空格隔开）：");
+//	for(i=0;i<=9;i++){
+//		scanf("%d",&a[i]);
+//	}
+//	p = a;
+//	sort(p,10);
+//	printf("排序后数组：");
+//	for(i=0;i<=9;i++){
+//		printf("%d ",a[i]);
+//	}
+//	printf("\n");
+//	return 0;
+//}
 
 
 
+#include <stdio.h>
 
-
+int main(){
+	int a[3][4] = {1,3,5,7,9,11,13,15,17,19,21,23};
+	printf("a---->%d\t\t*a---->%d\n",a,*a);
+	printf("a[0]---->%d\t*(a+0)---->%d\n",a[0],*(a+0));
+	printf("&a[0]---->%d\t&a[0][0]---->%d\n",&a[0],&a[0][0]);
+	printf("a[1]---->%d\ta+1---->%d\n",a[1],a+1);
+	printf("&a[1][0]---->%d\t*(a+1)+0---->%d\n",&a[1][0],*(a+1)+0);
+	printf("a[2]---->%d\t*(a+2)---->%d\n",a[2],*(a+2));
+	printf("&a[2]---->%d\ta+2---->%d\n",&a[2],a+2);
+	printf("a[1][0]---->%d\t\t*(*(a+1)+0)---->%d\n",a[1][0],*(*(a+1)+0));
+	printf("*a[2]---->%d\t\t*(*(a+2)+0)---->%d\n",*a[2],*(*(a+2)+0));
+	return 0;
+}
 
 
 

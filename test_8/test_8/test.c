@@ -504,6 +504,227 @@
 
 
 
+//#include <stdio.h>
+//
+//void copy(char from[],char to[]){
+//	while(*from!='\0'){
+//		*to = *from;
+//		from++;
+//		to++;
+//	}
+//	*to = '\0';
+//}
+//
+//int main(){
+//	char s1[] = "I am a teacher.";
+//	char s2[] = "You are a student.";
+//	puts(s1);
+//	puts(s2);
+//	copy(s1,s2);
+//	puts(s1);
+//	puts(s2);
+//	return 0;
+//}
+
+
+
+//#include <stdio.h>
+//
+//void copy(char from[],char to[]){
+//	while(*from!='\0'){
+//		*to = *from;
+//		to++;
+//		from++;
+//	}
+//	*to = '\0';
+//}
+//
+//int main(){
+//	char s1[] = "I am a teacher.";
+//	char s2[] = "You are a student.";
+//	char *from = s1;
+//	char *to = s2;
+//	puts(s1);
+//	puts(s2);
+//	copy(from,to);
+//	puts(s1);
+//	puts(s2);
+//	return 0;
+//}
+
+
+
+//#include <stdio.h>
+//
+//void copy(char *from,char *to){
+//	while(*from!='\0'){
+//		*to = *from;
+//		to++;
+//		from++;
+//	}
+//	*to = '\0';
+//}
+//
+//int main(){
+//	char s1[] = "I am a teacher.";
+//	char s2[] = "You are a student.";
+//	char *from = s1;
+//	char *to = s2;
+//	puts(s1);
+//	puts(s2);
+//	copy(from,to);
+//	puts(s1);
+//	puts(s2);
+//	return 0;
+//}
+
+
+
+//#include <stdio.h>
+//
+//int main(){
+//	char *p = "I love China!";
+//	p = p+7;
+//	puts(p);
+//	//printf("%s\n",p);
+//	return 0;
+//}
+
+
+
+//#include <stdio.h>
+//
+//int max(int num1,int num2){
+//	if(num1>num2){
+//		return num1;
+//	}
+//	else{
+//		return num2;
+//	}
+//}
+//
+//int main(){
+//	int a,b;
+//	int (*p)(int,int) = max;
+//	printf("请输入两个整数（用空格隔开）：");
+//	scanf("%d%d",&a,&b);
+//	printf("max = %d\n",(*p)(a,b));
+//	return 0;
+//}
+
+
+
+//#include <stdio.h>
+//
+//int max(int num1,int num2){
+//	if(num1>num2)
+//		return num1;
+//	else
+//		return num2;
+//}
+//
+//int min(int num1,int num2){
+//	if(num1<num2)
+//		return num1;
+//	else
+//		return num2;
+//}
+//
+//int main(){
+//	int a,b,i;
+//	int (*p)(int,int);
+//	printf("请输入两个整数（用空格隔开）：");
+//	scanf("%d%d",&a,&b);
+//	printf("请选择函数：max---1,min---2：");
+//	scanf("%d",&i);
+//	if(i==1)
+//		p = max;
+//	else
+//		p = min;
+//	if(i==1)
+//		printf("max = %d\n",(*p)(a,b));
+//	else
+//		printf("min = %d\n",(*p)(a,b));
+//	return 0;
+//}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

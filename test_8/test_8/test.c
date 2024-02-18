@@ -490,20 +490,137 @@
 
 
 
+//#include <stdio.h>
+//
+//int max(int a,int b){
+//	printf("max = ");
+//	if(a>b)
+//		return a;
+//	else
+//		return b;
+//}
+//
+//int min(int a,int b){
+//	printf("min = ");
+//	if(a<b)
+//		return a;
+//	else
+//		return b;
+//}
+//
+//int add(int a,int b){
+//	printf("add = ");
+//	return a+b;
+//}
+//
+//void fun(int a,int b,int (*p)(int,int)){
+//	printf("%d\n",(*p)(a,b));
+//}
+//
+//int main(){
+//	int a=34,b=-21,n;
+//	printf("请选择模式（1,2,3）：");
+//	scanf("%d",&n);
+//	if(n == 1)
+//		fun(a,b,max);
+//	else if(n == 2)
+//		fun(a,b,min);
+//	else if(n == 3)
+//		fun(a,b,add);
+//	return 0;
+//}
 
 
 
+//#include <stdio.h>
+//#include <math.h>
+//
+//float f1(float a,float b){
+//	return 0.5*(b*b-a*a)+b-a;
+//}
+//
+//float f2(float a,float b){
+//	return b*b+3*b-a*a-3*a;
+//}
+//
+//float f3(float a,float b){
+//	return exp(b)+b-exp(a)-a;
+//}
+//
+//float f4(float a,float b){
+//	return (1.0/3.0)*b*b*b+b*b+b-(1.0/3.0)*a*a*a-a*a-a;
+//}
+//
+//float f5(float a,float b){
+//	return 0.25*b*b*b*b-0.25*a*a*a*a;
+//}
+//
+//float integral(float a,float b,float (*p)(float,float)){
+//	return (*p)(a,b);
+//}
+//
+//int main(){
+//	float a,b;
+//	printf("请输入函数下限a和上限b(用空格隔开)：");
+//	scanf("%f%f",&a,&b);
+//	printf("函数(1+x)在上限为%5.2f下限为%5.2f的定积分 = %5.2f\n",a,b,integral(a,b,f1));
+//	printf("函数(2x+3)在上限为%5.2f下限为%5.2f的定积分 = %5.2f\n",a,b,integral(a,b,f2));
+//	printf("函数(e^x+1)在上限为%5.2f下限为%5.2f的定积分 = %5.2f\n",a,b,integral(a,b,f3));
+//	printf("函数(1+x)^2在上限为%5.2f下限为%5.2f的定积分 = %5.2f\n",a,b,integral(a,b,f4));
+//	printf("函数(x^3)在上限为%5.2f下限为%5.2f的定积分 = %5.2f\n",a,b,integral(a,b,f5));
+//	return 0;
+//}
 
 
 
+//#include <stdio.h>
+//
+//float * search(float(*p)[4],int n){
+//	return *(p+n);
+//}
+//
+//int main(){
+//	float *p,score[3][4] = {{60,70,80,90},{56,89,67,88},{34,78,90,66}};
+//	int i,n;
+//	printf("请输入学生序号：");
+//	scanf("%d",&n);
+//	p = search(score,n);
+//	printf("序号为%d的学生成绩：",n);
+//	for(i=0;i<4;i++){
+//		printf("%6.2f",*(p+i));
+//	}
+//	printf("\n");
+//	return 0;
+//}
 
 
 
-
-
-
-
-
+//#include <stdio.h>
+//
+//float * search(float(*p)[4],int n){
+//	return *(p+n);
+//}
+//
+//int main(){
+//	float *p,score[3][4] = {{60,70,80,90},{56,89,67,88},{34,78,90,66}};
+//	int i,j,flag;
+//	for(i=0;i<3;i++){
+//		p = search(score,i);
+//		flag = 0;
+//		for(j=0;j<4;j++){
+//			if(*(p+j) < 60)
+//				flag = 1;
+//		}
+//		if(flag == 1){
+//			printf("序号为%d的学生存在不及格，各科成绩为：",i);
+//			for(j=0;j<4;j++){
+//				printf("%7.2f",*(p+j));
+//			}
+//			printf("\n");
+//		}
+//	}
+//	return 0;
+//}
 
 
 

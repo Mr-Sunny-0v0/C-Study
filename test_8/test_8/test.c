@@ -243,55 +243,250 @@
 
 
 
+//#include <stdio.h>
+//
+//int main(){
+//	int a[3][4] = {{1,3,5,7},{9,11,13,15},{17,19,21,23}};
+//	printf("%d,%d\n",a,*a);
+//	printf("%d,%d\n",a[0],*(a+0));
+//	printf("%d,%d\n",&a[0],&a[0][0]);
+//	printf("%d,%d\n",a[1],a+1);
+//	printf("%d,%d\n",&a[1][0],*(a+1)+0);
+//	printf("%d,%d\n",a[2],*(a+2));
+//	printf("%d,%d\n",&a[2],a+2);
+//	printf("%d,%d\n",a[1][0],*(*(a+1)+0));
+//	printf("%d,%d\n",*a[2],*(*(a+2)+0));
+//	return 0;
+//}
 
 
 
+//#include <stdio.h>
+//
+//int main(){
+//	int *p,a[3][4] = {1,3,5,7,9,11,13,15,17,19,21,23};
+//	for(p=a[0];p<a[0]+12;p++){
+//		if((p-a[0])%4==0) printf("\n");
+//		printf("%4d",*p);
+//	}
+//	printf("\n");
+//	return 0;
+//}
 
 
 
+//#include <stdio.h>
+//
+//int main(){
+//	int a[3][4] = {1,3,5,7,9,11,13,15,17,19,21,23};
+//	int (*p)[4] = a;
+//	int i,j;
+//	printf("请输入行序号和列序号（用空格隔开）：");
+//	scanf("%d%d",&i,&j);
+//	printf("a[%d][%d] = %d\n",i,j,*(*(p+i)+j));
+//	return 0;
+//}
 
 
 
+//#include <stdio.h>
+//
+//void average(float *p,int n){
+//	float sum = 0.0;
+//	int i;
+//	for(i=0;i<n;i++){
+//		sum = sum + *(p+i);
+//	}
+//	printf("平均成绩 = %5.2f\n",sum/n);
+//}
+//
+//void search(float (*p)[4],int n){
+//	int i;
+//	printf("序号为%d的学生成绩：",n);
+//	for(i=0;i<4;i++){
+//		printf("%5.2f ",*(*(p+n)+i));
+//	}
+//	printf("\n");
+//}
+//
+//int main(){
+//	float score[3][4] = {{65,67,70,60},{80,87,90,81},{90,99,100,98}};
+//	average(*score,12);
+//	search(score,2);
+//	return 0;
+//}
 
 
 
+//#include <stdio.h>
+//
+//void search(float (*p)[4],int n){
+//	int i,j,count;
+//	for(i=0;i<n;i++){
+//		count = 0;
+//		for(j=0;j<4;j++){
+//			if(*(*(p+i)+j) < 60) count=1;
+//		}
+//		if(count == 1){
+//			printf("序号为%d的学生有不及格科目，各科成绩为：",i);
+//			for(j=0;j<4;j++){
+//				printf("%5.1f",*(*(p+i)+j));
+//			}
+//			printf("\n");
+//		}
+//
+//	}
+//}
+//
+//int main(){
+//	float score[3][4] = {{65,57,70,60},{58,87,90,81},{90,99,100,98}};
+//	search(score,3);
+//	return 0;
+//}
 
 
 
+//#include <stdio.h>
+//
+//int main(){
+//	char string[] = "I love China!";
+//	printf("%s\n",string);
+//	printf("%c\n",string[7]);
+//	return 0;
+//}
 
 
 
+//#include <stdio.h>
+//
+//int main(){
+//	char *string = "I love China!";
+//	printf("%s\n",string);
+//	return 0;
+//}
 
 
 
+//#include <stdio.h>
+//
+//int main(){
+//	int i;
+//	char a[] = "I am a student.";
+//	char b[20];
+//	for(i=0;*(a+i)!='\0';i++){
+//		*(b+i) = *(a+i);
+//	}
+//	*(b+i) = '\0';
+//	printf("字符串a = %s\n",a);
+//	printf("字符串b = %s\n",b);
+//	return 0;
+//}
 
 
 
+//#include <stdio.h>
+//
+//int main(){
+//	char a[] = "I am a boy.";
+//	char b[20];
+//	char *p1,*p2;
+//	for(p1=a,p2=b;*p1 != '\0';p1++,p2++){
+//		*p2 = *p1;
+//	}
+//	*p2 = '\0';
+//	printf("字符串a = %s\n",a);
+//	printf("字符串b = %s\n",b);
+//	return 0;
+//}
 
 
 
+//#include <stdio.h>
+//
+//void copy(char *from,char *to){
+//	for(;*from!='\0';from++,to++){
+//		*to = *from;
+//	}
+//	*to = '\0';
+//}
+//
+//int main(){
+//	char a[] = "I am a teacher.";
+//	char b[] = "You are a student.";
+//	copy(a,b);
+//	printf("字符串a = %s\n",a);
+//	printf("字符串b = %s\n",b);
+//	return 0;
+//}
 
 
 
+//#include <stdio.h>
+//
+//int main(){
+//	//char a[] = "I love China!";
+//	//a = a+7;
+//	char *p = "I love China!";
+//	p = p+7;
+//	printf("%s\n",p);
+//	return 0;
+//}
 
 
 
+//#include <stdio.h>
+//
+//int max(int a,int b){
+//	if(a>b) 
+//		return a;
+//	else 
+//		return b;
+//}
+//
+//int main(){
+//	int a,b;
+//	int (*p)(int,int) = max;
+//	printf("请输入两个整数（用空格隔开）：");
+//	scanf("%d%d",&a,&b);
+//	printf("较大值为%d\n",(*p)(a,b));
+//	return 0;
+//}
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+//#include <stdio.h>
+//
+//int max(int a,int b){
+//	if(a>b)
+//		return a;
+//	else
+//		return b;
+//}
+//
+//int min(int a,int b){
+//	if(a<b)
+//		return a;
+//	else
+//		return b;
+//}
+//
+//int main(){
+//	int a,b,c;
+//	int (*p)(int,int);
+//	printf("请输入两个整数a和b（用空格隔开）：");
+//	scanf("%d%d",&a,&b);
+//	printf("请输入1（max）或2（min）选择函数：");
+//	scanf("%d",&c);
+//	if(c==1){
+//		p = max;
+//		printf("max = %d\n",(*p)(a,b));
+//	}
+//	else{
+//		p=min;
+//		printf("min = %d\n",(*p)(a,b));
+//	}
+//	return 0;
+//}
 
 
 

@@ -624,6 +624,290 @@
 
 
 
+//#include <stdio.h>
+//#include <string.h>
+//
+//void sort(char *name[],int n){
+//	int i,j,k;
+//	char *temp;
+//	for(i=0;i<n-1;i++){
+//		k=i;
+//		for(j=i+1;j<n;j++){
+//			if(strcmp(name[k],name[j]) > 0)
+//				k=j;
+//		}
+//		if(k!=i){
+//			temp = name[k];
+//			name[k] = name[i];
+//			name[i] = temp;
+//		}
+//	}
+//}
+//
+//void print(char *name[],int n){
+//	int i;
+//	for(i=0;i<n;i++){
+//		printf("%s\n",name[i]);
+//	}
+//}
+//
+//int main(){
+//	char *name[5] = {"Follow me","BASIC","Great Wall","FORTRAN","Computer design"};
+//	sort(name,5);
+//	print(name,5);
+//	return 0;
+//}
+
+
+
+//#include <stdio.h>
+//
+//int main(){
+//	char *name[5] = {"Follow me","BASIC","Great Wall","FORTRAN","Computer design"};
+//	char **p;
+//	int i;
+//	for(i=0;i<5;i++){
+//		p = name + i;
+//		printf("%s\n",*p);
+//	}
+//	return 0;
+//}
+
+
+
+//#include <stdio.h>
+//
+//void sort(int *name[],int n){
+//	int **p = name;
+//	int i,j,k,temp;
+//	for(i=0;i<n-1;i++){
+//		k=i;
+//		for(j=i+1;j<n;j++){
+//			if(**(p+k) > **(p+j))
+//				k=j;
+//		}
+//		if(k!=i){
+//			temp = **(p+k);
+//			**(p+k) = **(p+i);
+//			**(p+i) = temp;
+//		}
+//	}
+//}
+//
+//int main(){
+//	int num[5] = {3,1,5,7,9};
+//	int *name[5] = {&num[0],&num[1],&num[2],&num[3],&num[4]};
+//	int **p,i;
+//	for(i=0;i<5;i++){
+//		p = name+i;
+//		printf("%d ",**p);
+//	}
+//	printf("\n");
+//	sort(name,5);
+//	for(i=0;i<5;i++){
+//		p = name+i;
+//		printf("%d ",**p);
+//	}
+//	printf("\n");
+//	return 0;
+//}
+
+
+
+//#include <stdlib.h>
+//#include <stdio.h>
+//
+//void check(int *p,int n){
+//	int i;
+//	for(i=0;i<n;i++){
+//		if(*(p+i) < 60)
+//			printf("不及格成绩：%d\n",*(p+i));
+//	}
+//}
+//
+//int main(){
+//	int i;
+//	int *p = (int *)malloc(5*sizeof(int));
+//	printf("请输入5名学生成绩（用空格隔开）：");
+//	for(i=0;i<5;i++){
+//		scanf("%d",p+i);
+//	}
+//	check(p,5);
+//	free(p);
+//	return 0;
+//}
+
+
+
+//#include <stdio.h>
+//
+//void sort(int *p,int n){
+//	int i,j,k,temp;
+//	for(i=0;i<n-1;i++){
+//		k=i;
+//		for(j=i+1;j<n;j++){
+//			if(*(p+k) > *(p+j))
+//				k = j;
+//		}
+//		if(k!=i){
+//			temp = *(p+k);
+//			*(p+k) = *(p+i);
+//			*(p+i) = temp;
+//		}
+//	}
+//}
+//
+//int main(){
+//	int i,a[3];
+//	printf("请输入三个整数（用空格隔开）：");
+//	for(i=0;i<3;i++){
+//		scanf("%d",&a[i]);
+//	}
+//	sort(a,3);
+//	printf("由小到大排序后：");
+//	for(i=0;i<3;i++){
+//		printf("%d ",a[i]);
+//	}
+//	printf("\n");
+//	return 0;
+//}
+
+
+
+//#include <stdio.h>
+//#include <string.h>
+//
+//void sort(char *p[3],int n){
+//	int i,j,k;
+//	char *temp;
+//	for(i=0;i<n-1;i++){
+//		k=i;
+//		for(j=i+1;j<n;j++){
+//			if(strcmp(p[k],p[j]) > 0)
+//				k = j;
+//		}
+//		if(k != i){
+//			temp = p[k];
+//			p[k] = p[i];
+//			p[i] = temp;
+//		}
+//	}
+//}
+//
+//int main(){
+//	int i;
+//	char str1[50],str2[50],str3[50];
+//	char *p[3] = {str1,str2,str3};
+//	for(i=0;i<3;i++){
+//		printf("请输入第%d个字符串：",i+1);
+//		gets(p[i]);
+//	}
+//	sort(p,3);
+//	printf("由小到大排序后：\n");
+//	for(i=0;i<3;i++){
+//		puts(p[i]);
+//	}
+//	return 0;
+//}
+
+
+
+//#include <stdio.h>
+//
+//void ru(int *p,int n){
+//	int i;
+//	printf("请输入%d个整数（用空格隔开）：",n);
+//	for(i=0;i<n;i++){
+//		scanf("%d",p+i);
+//	}
+//}
+//
+//void ex(int *p,int n){
+//	int i,min=0,max=0,temp;
+//	for(i=1;i<n;i++){
+//		if(*(p+min) > *(p+i))
+//			min = i;
+//		if(*(p+max) < *(p+i))
+//			max = i;
+//	}
+//	if(min != 0){
+//		temp = *(p+min);
+//		*(p+min) = *p;
+//		*p = temp;
+//	}
+//	if(max != n-1){
+//		if(max == 0)
+//			max = min;			//最大值是第一个数，第一次交换把他换跑了
+//		temp = *(p+max);
+//		*(p+max) = *(p+n-1);
+//		*(p+n-1) = temp;
+//	}
+//}
+//
+//void chu(int *p,int n){
+//	int i;
+//	printf("处理后：");
+//	for(i=0;i<n;i++){
+//		printf("%d ",*(p+i));
+//	}
+//	printf("\n");
+//}
+//
+//int main(){
+//	int a[10];
+//	ru(a,10);
+//	ex(a,10);
+//	chu(a,10);
+//	return 0;
+//}
+
+
+
+//#include <stdio.h>
+//
+//void ex(int *p,int n,int m){
+//	int i;
+//	for(i=n-1;i>=0;i--){
+//		*(p+i+m) = *(p+i);
+//	}
+//	for(i=n;i<n+m;i++){
+//		*(p+i-n) = *(p+i);
+//	}
+//}
+//
+//int main(){
+//	int i,n,m,num[50];
+//	printf("请输入整数个数 n ：");
+//	scanf("%d",&n);
+//	printf("请输入%d个整数（用空格隔开）：",n);
+//	for(i=0;i<n;i++){
+//		scanf("%d",&num[i]);
+//	}
+//	printf("请输入后移个数 m ：");
+//	scanf("%d",&m);
+//	ex(num,n,m);
+//	printf("移动后：");
+//	for(i=0;i<n;i++){
+//		printf("%d ",num[i]);
+//	}
+//	printf("\n");
+//	return 0;
+//}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

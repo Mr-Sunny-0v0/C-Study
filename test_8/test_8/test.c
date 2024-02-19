@@ -1246,38 +1246,224 @@
 
 
 
-#include <stdio.h>
+//#include <stdio.h>
+//
+//void aver_1(float (*p)[5]){
+//	float sum = 0;
+//	int i;
+//	for(i=0;i<4;i++){
+//		sum = sum + p[i][0];
+//	}
+//	printf("第一门课的平均成绩 = %.2f\n",sum/4);
+//}
+//
+//void fail_2(float (*p)[5]){
+//	int i,j,count;
+//	for(i=0;i<4;i++){
+//		count = 0;
+//		for(j=0;j<5;j++){
+//			if(p[i][j] < 60)
+//				count++;
+//		}
+//		if(count>=2){
+//			printf("第%d名学生有两门课以上成绩不及格\n各科成绩为：%.2f,%.2f,%.2f,%.2f,%.2f\n平均成绩 = %.2f\n",i+1,p[i][0],p[i][1],p[i][2],p[i][3],p[i][4],(p[i][0]+p[i][1]+p[i][2]+p[i][3]+p[i][4])/5);
+//		}
+//	}
+//
+//}
+//
+//void good(float (*p)[5]){
+//	int i,j,count;
+//	float sum;
+//	for(i=0;i<4;i++){
+//		count = 0;
+//		sum = 0;
+//		for(j=0;j<5;j++){
+//			sum = sum + p[i][j];
+//			if(p[i][j] >= 85)
+//				count++;
+//		}
+//		if(sum/5 >=90 || count == 5){
+//			printf("第%d名学生符合要求\n",i+1);
+//		}
+//
+//	}
+//}
+//
+//int main(){
+//	float score[4][5];
+//	int i,j;
+//	for(i=0;i<4;i++){
+//		printf("请输入第%d名学生的成绩：",i+1);
+//		for(j=0;j<5;j++){
+//			scanf("%f",&score[i][j]);
+//		}
+//	}
+//	aver_1(score);
+//	fail_2(score);
+//	good(score);
+//	return 0;
+//}
 
-int main(){
-	float score[4][5];
-	int i,j;
-	for(i=0;i<4;i++){
-		printf("请输入第%d名学生的成绩：",i+1);
-		for(j=0;j<5;j++){
-			scanf("%d",&score[i][j]);
-		}
-	}
-	aver_1
-	return 0;
-}
+
+
+//#include <stdio.h>
+//
+//int main(){
+//	char str[100] = "A123x456 17960? 302tab5876";
+//	char *p = str;
+//	int num[10],temp=0,i=0,j;
+//	while(*p != '\0'){
+//		if(*p >= '0' && *p <= '9'){
+//			temp = 10*temp + (*p-'0');
+//		}
+//		else{
+//			if(*(p-1) >= '0' && *(p-1) <= '9'){
+//				num[i] = temp;
+//				i++;
+//				temp = 0;
+//			}
+//		}
+//		p++;
+//	}
+//	if(*(p-1) >= '0' && *(p-1) <= '9'){
+//		num[i] = temp;
+//		i++;
+//	}
+//	printf("共有%d个整数，如下：",i);
+//	for(j=0;j<i;j++){
+//		printf("%d ",num[j]);
+//	}
+//	printf("\n");
+//	return 0;
+//}
 
 
 
+//#include <stdio.h>
+//
+//int strcmp(char *p1,char *p2){
+//	int i;
+//	for(i=0;p1[i]!='\0' && p2[i]!='\0';i++){
+//		if(p1[i] == p2[i])
+//			continue;
+//		else
+//			return (p1[i] - p2[i]);
+//	}
+//	if(p1[i]=='\0' || p2[i]=='\0'){
+//		return (p1[i] - p2[i]);
+//	}
+//}
+//
+//int main(){
+//	char str1[50],str2[50];
+//	printf("请输入第一个字符串：");
+//	gets(str1);
+//	printf("请输入第二个字符串：");
+//	gets(str2);
+//	if(strcmp(str1,str2) > 0){
+//		printf("第一个字符串大。");
+//	}
+//	else if(strcmp(str1,str2) < 0){
+//		printf("第二个字符串大。");
+//	}
+//	else{
+//		printf("两个字符串一样大。");
+//	}
+//	return 0;
+//}
 
 
 
+//#include <stdio.h>
+//
+//int main(){
+//	int num;
+//	char *p[12] = {"January","February","March","April","May","June","July","August","September","October","November","December"};
+//	printf("请输入月份号：");
+//	scanf("%d",&num);
+//	puts(p[num-1]);
+//	return 0;
+//}
 
 
 
+//19看学习辅导
 
 
 
+//#include <stdio.h>
+//#include <string.h>
+//
+//void sort(char **p){
+//	int i,j,k;
+//	char *temp;
+//	for(i=0;i<4;i++){
+//		k=i;
+//		for(j=i+1;j<5;j++){
+//			if(strcmp(p[k],p[j]) > 0){
+//				k = j;
+//			}
+//		}
+//		if(k!=i){
+//			temp = p[k];
+//			p[k] = p[i];
+//			p[i] = temp;
+//		}
+//	}
+//}
+//
+//int main(){
+//	char str1[50],str2[50],str3[50],str4[50],str5[50];
+//	char *p[5] = {str1,str2,str3,str4,str5};
+//	int i;
+//	for(i=0;i<5;i++){
+//		printf("请输入第%d个字符串：",i+1);
+//		gets(p[i]);
+//	}
+//	sort(p);
+//	printf("由小到大排序后：\n");
+//	for(i=0;i<5;i++){
+//		puts(p[i]);
+//	}
+//	return 0;
+//}
 
 
 
-
-
-
-
-
-
+//#include <stdio.h>
+//
+//void sort(int **p,int n){
+//	int i,j,k,*temp;
+//	for(i=0;i<n-1;i++){
+//		k=i;
+//		for(j=i+1;j<n;j++){
+//			if(*p[k] > *p[j]){
+//				k=j;
+//			}
+//		}
+//		if(k!=i){
+//			temp = p[k];
+//			p[k] = p[i];
+//			p[i] = temp;
+//		}
+//	}
+//}
+//
+//int main(){
+//	int i,n,data[20],*pd[20];
+//	printf("请输入整数个数：");
+//	scanf("%d",&n);
+//	printf("请输入%d个整数：",n);
+//	for(i=0;i<n;i++){
+//		scanf("%d",&data[i]);
+//		pd[i] = &data[i];
+//	}
+//	sort(pd,n);
+//	printf("由小到大排序后：");
+//	for(i=0;i<n;i++){
+//		printf("%d ",*pd[i]);
+//	}
+//	printf("\n");
+//	return 0;
+//}

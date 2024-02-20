@@ -341,19 +341,153 @@
 
 
 
+//#include <stdio.h>
+//
+//struct Person{
+//	int num;
+//	char name[20];
+//	char sex;
+//	char job;
+//	union {
+//		int clas;
+//		char position[20];
+//	}category;
+//};
+//
+//int main(){
+//	struct Person person[2];
+//	int i;
+//	for(i=0;i<2;i++){
+//		printf("请输入此人的数据：");
+//		scanf("%d %s %c %c",&person[i].num,person[i].name,&person[i].sex,&person[i].job);
+//		if(person[i].job == 's'){
+//			scanf("%d",&person[i].category.clas);
+//		}
+//		else if(person[i].job == 't'){
+//			scanf("%s",person[i].category.position);
+//		}
+//		else{
+//			printf("输入错误！");
+//			return 0;
+//		}
+//	}
+//	printf("\n");
+//	for(i=0;i<2;i++){
+//		if(person[i].job == 's'){
+//			printf("%d\t%s\t%c\t%c\t%d\n",person[i].num,person[i].name,person[i].sex,person[i].job,person[i].category.clas);
+//		}
+//		else{
+//			printf("%d\t%s\t%c\t%c\t%s\n",person[i].num,person[i].name,person[i].sex,person[i].job,person[i].category.position);
+//		}
+//	}
+//	return 0;
+//}
 
 
 
+//#include <stdio.h>
+//
+//enum Color{
+//	red,
+//	yellow,
+//	blue,
+//	white,
+//	black
+//};
+//
+//int main(){
+//	enum Color i,j,k,pri;
+//	int n=0,loop;
+//	for(i=red;i<=black;i++){
+//		for(j=red;j<=black;j++){
+//			if(i!=j){
+//				for(k=red;k<=black;k++){
+//					if(k!=i && k!=j){
+//						n++;
+//						printf("%-4d",n);
+//						for(loop=1;loop<=3;loop++){
+//							switch(loop){
+//								case 1:pri = i;break;
+//								case 2:pri = j;break;
+//								case 3:pri = k;break;
+//								default:break;
+//							}
+//							switch(pri){
+//								case red:printf("%-10s","red");break;
+//								case yellow:printf("%-10s","yellow");break;
+//								case blue:printf("%-10s","blue");break;
+//								case white:printf("%-10s","white");break;
+//								case black:printf("%-10s","black");break;
+//								default:break;
+//							}
+//						}
+//						printf("\n");
+//					}
+//				}
+//			}
+//		}
+//	}
+//	printf("总共有%d种情况\n",n);
+//	return 0;
+//}
 
 
 
+//#include <stdio.h>
+//
+//struct Date{
+//	int year;
+//	int month;
+//	int day;
+//};
+//
+//int main(){
+//	struct Date date;
+//	int mon[12] = {31,28,31,30,31,30,31,31,30,31,30,31};
+//	int i,count=0;
+//	printf("请输入年月日（用空格隔开）：");
+//	scanf("%d%d%d",&date.year,&date.month,&date.day);
+//	if(((date.year%4==0)&&(date.year%100!=0)) || (date.year%400==0)){
+//		mon[1] = 29;
+//	}
+//	for(i=0;i<date.month-1;i++){
+//		count = count + mon[i];
+//	}
+//	count = count + date.day;
+//	printf("%d年%d月%d日是本年第%d天\n",date.year,date.month,date.day,count);
+//	return 0;
+//}
 
 
 
-
-
-
-
+//#include <stdio.h>
+//
+//struct Date{
+//	int year;
+//	int month;
+//	int day;
+//};
+//
+//int count_day(struct Date date){
+//	int mon[12]={31,28,31,30,31,30,31,31,30,31,30,31};
+//	int count=0,i;
+//	if((date.year%4==0 && date.year%100!=0) || date.year%400==0){
+//		mon[1] = 29;
+//	}
+//	for(i=0;i<date.month-1;i++){
+//		count = count + mon[i];
+//	}
+//	count = count + date.day;
+//	return count;
+//}
+//
+//int main(){
+//	struct Date date;
+//	printf("请输入年月日（用空格隔开）：");
+//	scanf("%d%d%d",&date.year,&date.month,&date.day);
+//	printf("%d年%d月%d日是本年第%d天\n",date.year,date.month,date.day,count_day(date));
+//	return 0;
+//}
 
 
 

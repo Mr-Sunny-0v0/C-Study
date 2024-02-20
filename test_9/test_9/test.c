@@ -203,41 +203,141 @@
 
 //#include <stdio.h>
 //
-//struct Student{
-//	int num;
-//	float score;
-//	struct Student *next;
-//};
-//
 //int main(){
+//	struct Student{
+//		int num;
+//		float score;
+//		struct Student *next;
+//	};
 //	struct Student a,b,c;
 //	struct Student *head,*p;
+//	head = &a;
+//
 //	a.num = 10101;
 //	a.score = 89.5;
+//	a.next = &b;
+//
 //	b.num = 10103;
 //	b.score = 90;
+//	b.next = &c;
+//
 //	c.num = 10107;
 //	c.score = 85;
-//	head = &a;
-//	a.next = &b;
-//	b.next = &c;
 //	c.next = NULL;
-//	p = head;
-//	while(p!=NULL){
-//		printf("%d,%.2f\n",p->num,p->score);
-//		p = p->next;
+//
+//	for(p=head;p!=NULL;p=p->next){
+//		printf("%d\t%.2f\n",p->num,p->score);
 //	}
 //	return 0;
 //}
 
 
 
+//#include <stdio.h>
+//#include <stdlib.h>
+//
+//struct Student{
+//	int num;
+//	float score;
+//	struct Student *next;
+//};
+//
+//struct Student * creat(){
+//	struct Student *head=NULL,*p1=NULL,*p2=NULL;	//head指向链头，p1指向新节点，p2指向链尾；
+//	int num;
+//	float score;
+//	printf("请输入学生的学号和分数：");
+//	scanf("%d%f",&num,&score);
+//	while(num!=0){				//输入0学号代表结束
+//		p1 = (struct Student *)malloc(sizeof(struct Student));
+//		p1->num = num;
+//		p1->score = score;
+//		if(head == NULL){
+//			head = p1;
+//			p2 = p1;
+//		}
+//		else{
+//			p2->next = p1;
+//			p2 = p1;
+//		}
+//		printf("请输入学生的学号和分数：");
+//		scanf("%d%f",&num,&score);
+//	}
+//	p2->next = NULL;
+//	return head;
+//}
+//
+//int main(){
+//	struct Student *p,*temp;	//temp用来释放链表
+//	p = creat();
+//	printf("%d\t%.2f\n",p->num,p->score);
+//	while(p!=NULL){
+//		temp = p->next;
+//		free(p);
+//		p = temp;
+//	}
+//	return 0;
+//}
 
 
 
-
-
-
+//#include <stdio.h>
+//#include <stdlib.h>
+//
+//struct Student{
+//	int num;
+//	float score;
+//	struct Student *next;
+//};
+//
+//struct Student * creat(){
+//	struct Student *head=NULL,*p1=NULL,*p2=NULL;		//head指向链头，p1指向新节点，p2指向链尾；
+//	int num;
+//	float score;
+//	printf("请输入学生的学号和成绩：");
+//	scanf("%d%f",&num,&score);
+//	while(num!=0){		//输入0学号代表结束
+//		p1 = (struct Student *)malloc(sizeof(struct Student));
+//		p1->num = num;
+//		p1->score = score;
+//		if(head == NULL){
+//			head = p1;
+//			p2 = p1;
+//		}
+//		else{
+//			p2->next = p1;
+//			p2 = p1;
+//		}
+//		printf("请输入学生的学号和成绩：");
+//		scanf("%d%f",&num,&score);
+//	}
+//	p2->next = NULL;
+//	return head;
+//}
+//
+//void print(struct Student *p){
+//	while(p!=NULL){
+//		printf("%d\t%.2f\n",p->num,p->score);
+//		p = p->next;
+//	}
+//}
+//
+//void w_free(struct Student *p){
+//	struct Student *temp;
+//	while(p!=NULL){
+//		temp = p->next;
+//		free(p);
+//		p = temp;
+//	}
+//}
+//
+//int main(){
+//	struct Student *p;
+//	p = creat();
+//	print(p);
+//	w_free(p);
+//	return 0;
+//}
 
 
 

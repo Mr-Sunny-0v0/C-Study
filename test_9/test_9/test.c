@@ -788,75 +788,253 @@
 
 
 
-#include <stdio.h>
-#include <stdlib.h>
+//#include <stdio.h>
+//#include <stdlib.h>
+//
+//struct Student{
+//	int num;
+//	float score;
+//	struct Student *next;
+//};
+//
+//struct Student * creat(){
+//	struct Student *head=NULL,*p1=NULL,*p2=NULL;		//head指向链头，p2指向链尾，p1指向新节点；
+//	int num;
+//	float score;
+//	printf("请输入学生的学号和成绩：");
+//	scanf("%d%f",&num,&score);
+//	while(num != 0){		//学号为0代表结束
+//		p1 = (struct Student *)malloc(sizeof(struct Student));
+//		p1->num = num;
+//		p1->score = score;
+//		if(head == NULL){
+//			head = p1;
+//			p2 = p1;
+//		}
+//		else{
+//			p2->next = p1;
+//			p2 = p1;
+//		}
+//		printf("请输入学生的学号和成绩：");
+//		scanf("%d%f",&num,&score);
+//	}
+//	p2->next = NULL;
+//	return head;
+//}
+//
+//void print(struct Student *head){
+//	printf("学号\t成绩\n");
+//	while(head!=NULL){
+//		printf("%d\t%.2f\n",head->num,head->score);
+//		head = head->next;
+//	}
+//}
+//
+//struct Student * incor(struct Student *head_a,struct Student *head_b){		//将链表b合并到链表a中
+//	struct Student *last_a=head_a,*pa=head_a;		//last_a指向链表a的尾部,pa指向链表a中间的节点
+//	struct Student *temp;					//因为在插head_b节点时，head_b链的原有关系不能改变，所以要建立一个temp节点暂时存放head_b节点，但链表a的关系要变化，所以不用为链表a建立暂存节点
+//	while(last_a->next != NULL){
+//		last_a = last_a->next;
+//	}
+//	while(head_b != NULL){
+//		temp = (struct Student *)malloc(sizeof(struct Student));
+//		temp->num = head_b->num;
+//		temp->score = head_b->score;
+//		if(temp->num < head_a->num){		//插在链头
+//			temp->next = head_a;
+//			head_a = temp;
+//		}
+//		else if(temp->num > last_a->num){		//插在链尾
+//			last_a->next = temp;
+//			temp->next = NULL;
+//			last_a = temp;
+//		}
+//		else{							//插在链中
+//			while(temp->num > pa->next->num){
+//				pa = pa->next; 
+//			}
+//			temp->next = pa->next;
+//			pa->next = temp;
+//		}
+//		head_b = head_b->next;
+//		pa = head_a;
+//	}
+//	return head_a;
+//}
+//
+//int main(){
+//	struct Student *head_a,*head_b;
+//	printf("******创建链表a******\n");
+//	head_a = creat();
+//	printf("******创建链表b******\n");
+//	head_b = creat();
+//	printf("******链表a数据******\n");
+//	print(head_a);
+//	printf("******链表b数据******\n");
+//	print(head_b);
+//	head_a = incor(head_a,head_b);	//将链表b合并到链表a中,并将新的a链头赋值给head_a
+//	printf("******合并后链表数据******\n");
+//	print(head_a);
+//	return 0;
+//}
 
-struct Student{
-	int num;
-	float score;
-	struct Student *next;
-};
-
-struct Student * creat(){
-	struct Student *head=NULL,*p1=NULL,*p2=NULL;		//head指向链头，p2指向链尾，p1指向新节点；
-	int num;
-	float score;
-	printf("请输入学生的学号和成绩：");
-	scanf("%d%f",&num,&score);
-	while(num != 0){		//学号为0代表结束
-		p1 = (struct Student *)malloc(sizeof(struct Student));
-		p1->num = num;
-		p1->score = score;
-		if(head == NULL){
-			head = p1;
-			p2 = p1;
-		}
-		else{
-			p2->next = p1;
-			p2 = p1;
-		}
-		printf("请输入学生的学号和成绩：");
-		scanf("%d%f",&num,&score);
-	}
-	p2->next = NULL;
-	return head;
-}
-
-void print(struct Student *head){
-	printf("学号\t成绩\n");
-	while(head!=NULL){
-		printf("%d\t%.2f\n",head->num,head->score);
-		head = head->next;
-	}
-}
-
-void incor(struct Student *head_a,struct Student *head_b){		//将链表b合并到链表a中
-	
-}
-
-int main(){
-	struct Student *head_a,*head_b;
-	printf("******创建链表a******\n");
-	head_a = creat();
-	printf("******创建链表b******\n");
-	head_b = creat();
-	printf("******链表a数据******\n");
-	print(head_a);
-	printf("******链表b数据******\n");
-	print(head_b);
-	incor(head_a,head_b);	//将链表b合并到链表a中
-	printf("******合并后链表数据******\n");
-	print(head_a);
-	return 0;
-}
 
 
+//#include <stdio.h>
+//#include <stdlib.h>
+//
+//struct Student{
+//	int num;
+//	char name[20];
+//	struct Student *next;
+//};
+//
+//struct Student * creat(){
+//	struct Student *head=NULL,*p1=NULL,*p2=NULL;		//head指向链头p1指向新节点p2指向链尾
+//	p1 = (struct Student *)malloc(sizeof(struct Student));
+//	printf("请输入学生学号和名字：");
+//	scanf("%d%s",&p1->num,p1->name);
+//	while(p1->num != 0){
+//		if(head == NULL){
+//			head = p1;
+//			p2 = p1;
+//		}
+//		else{
+//			p2->next = p1;
+//			p2 = p1;
+//		}
+//		p1 = (struct Student *)malloc(sizeof(struct Student));
+//		printf("请输入学生学号和名字：");
+//		scanf("%d%s",&p1->num,p1->name);
+//	}
+//	p2->next = NULL;
+//	return head;
+//}
+//
+//void print(struct Student *head){
+//	printf("学号\t名字\n");
+//	while(head!=NULL){
+//		printf("%d\t%s\n",head->num,head->name);
+//		head = head->next;
+//	}
+//}
+//
+//struct Student * del_same(struct Student *head_a,struct Student *head_b){
+//	struct Student *pa=head_a,*temp;
+//	while(head_b != NULL){
+//		if(head_b->num == head_a->num){		//删除链头
+//			temp = head_a;
+//			head_a = head_a->next;
+//			free(temp);
+//		}
+//		else{		//删除链间或链尾
+//			while((pa->next->num != head_b->num) && (pa->next->next != NULL)){		//找到目标 或 没有此学号
+//				pa = pa->next;
+//			}
+//			if((pa->next->num == head_b->num) || (pa->next->next != NULL)){		//找到目标执行语句，没找到目标不执行
+//				temp = pa->next;
+//				pa->next = pa->next->next;
+//				free(temp);
+//			}
+//		}
+//		pa = head_a;
+//		head_b = head_b->next;
+//	}
+//	return head_a;
+//}
+//
+//int main(){
+//	struct Student *head_a,*head_b;
+//	printf("******创建链表a******\n");
+//	head_a = creat();
+//	printf("******创建链表b******\n");
+//	head_b = creat();
+//	printf("******链表a数据******\n");
+//	print(head_a);
+//	printf("******链表b数据******\n");
+//	print(head_b);
+//	head_a = del_same(head_a,head_b);
+//	printf("******删除后链表a数据******\n");
+//	print(head_a);
+//	return 0;
+//}
 
 
 
-
-
-
+//#include <stdio.h>
+//#include <stdlib.h>
+//
+//struct Student{
+//	int num;
+//	char name[20];
+//	char sex;
+//	int age;
+//	struct Student *next;
+//};
+//
+//struct Student * creat(){
+//	struct Student *head=NULL,*p1=NULL,*p2=NULL;
+//	p1 = (struct Student *)malloc(sizeof(struct Student));
+//	printf("请输入学生数据：");
+//	scanf("%d %s %c %d",&p1->num,p1->name,&p1->sex,&p1->age);
+//	while(p1->num != 0){
+//		if(head == NULL){
+//			head = p1;
+//			p2 = p1;
+//		}
+//		else{
+//			p2->next = p1;
+//			p2 = p1;
+//		}
+//		p1 = (struct Student *)malloc(sizeof(struct Student));
+//		printf("请输入学生数据：");
+//		scanf("%d %s %c %d",&p1->num,p1->name,&p1->sex,&p1->age);
+//	}
+//	p2->next = NULL;
+//	return head;
+//}
+//
+//void print(struct Student *head){
+//	printf("学号\t姓名\t性别\t年龄\n");
+//	while(head!=NULL){
+//		printf("%d\t%s\t%c\t%d\n",head->num,head->name,head->sex,head->age);
+//		head = head->next;
+//	}
+//}
+//
+//struct Student * del_age(struct Student *head,int age){
+//	struct Student *p=head;	//p用来遍历节点
+//	if(age == head->age){	//单独分析链头
+//		head = head->next;
+//	}
+//	//这里注意：p指向的还是原来的head，因为要保证p指向当前判断节点的前一个节点，使得接下来删除的都是中间节点或末尾节点
+//	while(p->next->next != NULL){		//遍历到倒数第二个节点循环结束，因为p记录前一个节点，所以最后一个节点遍历不到，要单独分析
+//		if(p->next->age == age){
+//			p->next = p->next->next;
+//		}
+//		p = p->next;
+//	}
+//	if(p->next->age = age){		//单独分析链尾
+//		p->next = NULL;
+//	}
+//	return head;
+//}
+//
+//int main(){
+//	struct Student *head;
+//	int age;
+//	printf("***创建链表***\n");
+//	head = creat();
+//	printf("***链表内容***\n");
+//	print(head);
+//	printf("***删除链表元素***\n");
+//	printf("请输入年龄：");
+//	scanf("%d",&age);
+//	head = del_age(head,age);
+//	printf("***删除后链表内容***\n");
+//	print(head);
+//	return 0;
+//}
 
 
 

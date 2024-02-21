@@ -491,27 +491,364 @@
 
 
 
+//#include <stdio.h>
+//
+//struct Student{
+//	int num;
+//	char name[20];
+//	float score[3];
+//};
+//
+//void print(struct Student *p){
+//	int i;
+//	printf("学号\t姓名\t成绩1\t成绩2\t成绩3\n");
+//	for(i=0;i<5;i++){
+//		printf("%d\t%s\t%.2f\t%.2f\t%.2f\n",p[i].num,p[i].name,p[i].score[0],p[i].score[1],p[i].score[2]);
+//	}
+//}
+//
+//int main(){
+//	struct Student st[5];
+//	int i;
+//	for(i=0;i<5;i++){
+//		printf("请输入第%d个学生的数据：",i+1);
+//		scanf("%d%s%f%f%f",&st[i].num,st[i].name,&st[i].score[0],&st[i].score[1],&st[i].score[2]);
+//	}
+//	print(st);
+//	return 0;
+//}
 
 
 
+//#include <stdio.h>
+//
+//struct Student{
+//	int num;
+//	char name[20];
+//	float score[3];
+//};
+//
+//void input(struct Student *p){
+//	int i;
+//	for(i=0;i<5;i++){
+//		printf("请输入第%d个学生的数据：",i+1);
+//		scanf("%d%s%f%f%f",&p[i].num,p[i].name,&p[i].score[0],&p[i].score[1],&p[i].score[2]);
+//	}
+//}
+//
+//void print(struct Student *p){
+//	int i;
+//	printf("学号\t姓名\t成绩1\t成绩2\t成绩3\n");
+//	for(i=0;i<5;i++){
+//		printf("%d\t%s\t%.2f\t%.2f\t%.2f\n",p[i].num,p[i].name,p[i].score[0],p[i].score[1],p[i].score[2]);
+//	}
+//}
+//
+//int main(){
+//	struct Student st[5];
+//	input(st);
+//	print(st);
+//	return 0;
+//}
 
 
 
+//#include <stdio.h>
+//
+//struct Student{
+//	int num;
+//	char name[20];
+//	float score[3];
+//	float aver;
+//};
+//
+//void input(struct Student *p){
+//	int i;
+//	for(i=0;i<10;i++){
+//		printf("请输入第%d个学生的数据：",i+1);
+//		scanf("%d%s%f%f%f",&p[i].num,p[i].name,&p[i].score[0],&p[i].score[1],&p[i].score[2]);
+//	}
+//}
+//
+//void count_aver(struct Student *p){
+//	int i;
+//	float aver;
+//	for(i=0;i<10;i++){
+//		aver = (p[i].score[0]+p[i].score[1]+p[i].score[2])/3;
+//		p[i].aver = aver;
+//	}
+//}
+//
+//void put_all_aver(struct Student *p){
+//	float sum = 0;
+//	int i;
+//	for(i=0;i<10;i++){
+//		sum = sum + p[i].score[0]+p[i].score[1]+p[i].score[2];
+//	}
+//	printf("总平均成绩 = %.2f\n",sum/30);
+//}
+//
+//void put_max_aver(struct Student *p){
+//	int i,flag=0;		//flag存放最高成绩的学生位置
+//	for(i=1;i<10;i++){
+//		if(p[flag].aver < p[i].aver){
+//			flag = i;
+//		}
+//	}
+//	printf("第%d名学生的成绩最好，该学生数据如下：\n",flag+1);
+//	printf("学号\t姓名\t成绩1\t成绩2\t成绩3\t平均分\n");
+//	printf("%d\t%s\t%.2f\t%.2f\t%.2f\t%.2f\n",p[flag].num,p[flag].name,p[flag].score[0],p[flag].score[1],p[flag].score[2],p[flag].aver);
+//}
+//
+//int main(){
+//	struct Student st[10];
+//	input(st);
+//	count_aver(st);
+//	put_all_aver(st);
+//	put_max_aver(st);
+//	return 0;
+//}
 
 
 
+//#include <stdio.h>
+//#include <stdlib.h>
+//
+//struct Person{
+//	int num;
+//	struct Person *next;
+//};
+//
+//struct Person * creat(int n){
+//	int i;
+//	struct Person *head=NULL,*p1=NULL,*p2=NULL;		//head指向链头，p2指向链尾，p1指向新节点；
+//	for(i=1;i<=n;i++){
+//		p1 = (struct Person *)malloc(sizeof(struct Person));
+//		(*p1).num = i;
+//		if(head == NULL){
+//			head = p1;
+//			p2 = p1;
+//		}
+//		else{
+//			p2->next = p1;
+//			p2 = p1;
+//		}
+//	}
+//	p2->next = NULL;
+//	return head;
+//}
+//
+//void final(struct Person *p,int n){
+//	int k=0,m=0;		//k循环123，m代表退出个数
+//	struct Person * temp = p;
+//	while(m<n-1){		//记住
+//		if((*temp).num != 0){
+//			k++;
+//		}
+//		if(k==3){
+//			(*temp).num = 0;
+//			m++;
+//			k=0;
+//		}
+//		temp = temp->next;
+//		if(temp == NULL){
+//			temp = p;
+//		}
+//	}
+//	temp = p;
+//	while((*temp).num==0){
+//		temp = temp->next;
+//	}
+//	printf("最后留在圈子里原来的序号 = %d\n",(*temp).num);
+//}
+//
+//void w_free(struct Person *p){
+//	struct Person *temp;
+//	while(p!=NULL){
+//		temp = p->next;
+//		free(p);
+//		p = temp;
+//	}
+//	printf("\n******空间释放完毕******\n");
+//}
+//
+//int main(){
+//	struct Person *p;
+//	p = creat(13);
+//	final(p,13);
+//	w_free(p);
+//	return 0;
+//}
 
 
 
+////7 8 9
+//
+//#include <stdio.h>
+//#include <stdlib.h>
+//
+//struct Student{
+//	int num;
+//	float score;
+//	struct Student *next;
+//};
+//
+//struct Student * creat(){
+//	struct Student *head=NULL,*p1=NULL,*p2=NULL;		//head指向链头，p2指向链尾，p1指向新节点；
+//	int num;
+//	float score;
+//	printf("请输入学生的学号和成绩：");
+//	scanf("%d%f",&num,&score);
+//	while(num != 0){		//学号为0代表结束
+//		p1 = (struct Student *)malloc(sizeof(struct Student));
+//		p1->num = num;
+//		p1->score = score;
+//		if(head == NULL){
+//			head = p1;
+//			p2 = p1;
+//		}
+//		else{
+//			p2->next = p1;
+//			p2 = p1;
+//		}
+//		printf("请输入学生的学号和成绩：");
+//		scanf("%d%f",&num,&score);
+//	}
+//	p2->next = NULL;
+//	return head;
+//}
+//
+//void print(struct Student *head){
+//	printf("学号\t成绩\n");
+//	while(head!=NULL){
+//		printf("%d\t%.2f\n",head->num,head->score);
+//		head = head->next;
+//	}
+//}
+//
+//void del(struct Student *head,int num){		//删除学号为num的节点
+//	struct Student *p1=head,*p2=head;	//p1指向要删除的节点，p2指向上一个节点
+//	while(p1->num != num){
+//		p1 = p1->next;
+//	}
+//	if(p1 == head){		//要删除节点是头结点
+//		head = p1->next;
+//		free(p1);
+//	}
+//	else{
+//		while(p2->next != p1){
+//			p2 = p2->next;
+//		}
+//		p2->next = p1->next;
+//		free(p1);
+//	}
+//}
+//
+//void insert(struct Student *head,struct Student *node){		//按学号顺序插入节点
+//	struct Student *p1=head,*p2=head;	//p1指向要插入位置的前一个节点,p2指向链尾
+//	while(p2->next!=NULL){
+//		p2 = p2->next;
+//	}
+//	if(node->num < head->num){		//插在链头
+//		node->next = head;
+//		head = node;
+//	}
+//	else if(node->num > p2->num){		//插在链尾
+//		p2->next = node;
+//		node->next = NULL;
+//	}
+//	else{		//插在链中间
+//		while(p1->next->num < node->num){
+//			p1 = p1->next;
+//		}
+//		node->next = p1->next;
+//		p1->next = node;
+//	}
+//}
+//
+//int main(){
+//	struct Student *head,node;
+//	int num;
+//
+//	head = creat();
+//	print(head);
+//
+//	printf("请输入要删除的学号：");
+//	scanf("%d",&num);
+//	del(head,num);
+//	print(head);
+//
+//	printf("请输入要插入学生的学号和成绩：");
+//	scanf("%d%f",&node.num,&node.score);
+//	insert(head,&node);
+//	print(head);
+//
+//	return 0;
+//}
 
 
 
+#include <stdio.h>
+#include <stdlib.h>
 
+struct Student{
+	int num;
+	float score;
+	struct Student *next;
+};
 
+struct Student * creat(){
+	struct Student *head=NULL,*p1=NULL,*p2=NULL;		//head指向链头，p2指向链尾，p1指向新节点；
+	int num;
+	float score;
+	printf("请输入学生的学号和成绩：");
+	scanf("%d%f",&num,&score);
+	while(num != 0){		//学号为0代表结束
+		p1 = (struct Student *)malloc(sizeof(struct Student));
+		p1->num = num;
+		p1->score = score;
+		if(head == NULL){
+			head = p1;
+			p2 = p1;
+		}
+		else{
+			p2->next = p1;
+			p2 = p1;
+		}
+		printf("请输入学生的学号和成绩：");
+		scanf("%d%f",&num,&score);
+	}
+	p2->next = NULL;
+	return head;
+}
 
+void print(struct Student *head){
+	printf("学号\t成绩\n");
+	while(head!=NULL){
+		printf("%d\t%.2f\n",head->num,head->score);
+		head = head->next;
+	}
+}
 
+void incor(struct Student *head_a,struct Student *head_b){		//将链表b合并到链表a中
+	
+}
 
-
+int main(){
+	struct Student *head_a,*head_b;
+	printf("******创建链表a******\n");
+	head_a = creat();
+	printf("******创建链表b******\n");
+	head_b = creat();
+	printf("******链表a数据******\n");
+	print(head_a);
+	printf("******链表b数据******\n");
+	print(head_b);
+	incor(head_a,head_b);	//将链表b合并到链表a中
+	printf("******合并后链表数据******\n");
+	print(head_a);
+	return 0;
+}
 
 
 

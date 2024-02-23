@@ -100,7 +100,30 @@
 
 
 
-
+//#include <stdio.h>
+//#define MAX 0
+//
+//int main(){
+//	char str[100];
+//	int i;
+//	printf("ÇëÊäÈë×Ö·û´®£º");
+//	gets(str);
+//	#if MAX
+//		for(i=0;str[i]!='\0';i++){
+//			if(str[i]>='a' && str[i]<='z'){
+//				str[i] = str[i] - 32;
+//			}
+//		}
+//	#else
+//		for(i=0;str[i]!='\0';i++){
+//			if(str[i]>='A' && str[i]<='Z'){
+//				str[i] = str[i] + 32;
+//			}
+//		}
+//	#endif
+//	puts(str);
+//	return 0;
+//}
 
 
 
